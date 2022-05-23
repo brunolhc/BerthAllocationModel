@@ -1,0 +1,43 @@
+SheetConnection sheet("Test_Case_2B7N73.xlsb");
+
+ N from SheetRead(sheet,"'Data'!A2");
+ B from SheetRead(sheet,"'Data'!A5");
+ P = 7;
+ M from SheetRead(sheet,"'Data'!A11");
+ TM from SheetRead(sheet,"'Data'!A14");
+
+ aux_input_1 from SheetRead(sheet,"'Data'!E1");
+ arrival_time from SheetRead(sheet,aux_input_1);
+
+ aux_input_2 from SheetRead(sheet,"'Data'!F1");
+ deadline_time from SheetRead(sheet,aux_input_2);
+
+ aux_input_3 from SheetRead(sheet,"'Data'!K1");
+ Avalible_machine from SheetRead(sheet,aux_input_3);
+
+ aux_input_4 from SheetRead(sheet,"'Data'!G1");
+ load_ship from SheetRead(sheet,aux_input_4);
+
+ aux_output_1 from SheetRead(sheet,"'Result Aux'!B1");
+ Result_sched to SheetWrite(sheet,aux_output_1);
+
+ aux_output_2 from SheetRead(sheet,"'Result Aux'!J1");
+ T to SheetWrite(sheet,aux_output_2);
+
+ aux_output_3 from SheetRead(sheet,"'Result Aux'!K1");
+ t to SheetWrite(sheet,aux_output_3);
+
+ aux_output_4 from SheetRead(sheet,"'Result Aux'!L1");
+ Result_sim to SheetWrite(sheet,aux_output_4);
+
+ aux_output_5 from SheetRead(sheet,"'Result Aux'!M1");
+ Pattern_C to SheetWrite(sheet,aux_output_5);
+
+ opt_time to SheetWrite(sheet,"'Result'!E1");
+
+ z to SheetWrite(sheet,"'Result'!H1");
+ d to SheetWrite(sheet,"'Result'!J1");
+
+service_time = [[ 4.71 15.93 4.72 18.20 16.62 14.97 18.65 ] [ 4.29 14.51 4.30 16.58 15.14 13.64 16.99 ] [ 2.35 7.96 2.36 9.10 8.31 7.49 9.33 ] [ 2.14 7.25 2.15 8.29 7.57 6.82 8.50 ] [ 1.57 5.31 1.57 6.07 5.54 4.99 6.22 ] [ 1.43 4.84 1.43 5.53 5.05 4.55 5.66 ] [ 1.43 4.84 1.43 5.53 5.05 4.55 5.66 ] ]; 
+
+qtm = [[ 1 1 ] [ 2 1 ] [ 2 2 ] [ 3 2 ] [ 3 3 ] [ 4 3 ] [ 4 3 ] ]; 
